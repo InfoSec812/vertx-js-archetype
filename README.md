@@ -21,4 +21,4 @@ mvn archetype:generate -DarchetypeGroupId=com.zanclus.codepalousa -DarchetypeArt
 ```
 
 Maven will interactively prompt you to build the template application. A small JavaScript
-stub can be found under <project root>/src/main/resources/<package path>/main.js
+stub can be found under {{project root}}/src/main/resources/{{package path}}/main.js
