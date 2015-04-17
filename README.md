@@ -17,7 +17,7 @@ Using
 -----
 
 ```bash
-mvn archetype:generate -DarchetypeGroupId=com.zanclus.codepalousa -DarchetypeArtifactId=vertx-js-archetype -DarchetypeVersion=3.0.0-M4
+mvn archetype:generate -DarchetypeGroupId=com.zanclus.codepalousa -DarchetypeArtifactId=vertx-js-archetype
 ```
 
 Maven will interactively prompt you to build the template application. A small JavaScript
