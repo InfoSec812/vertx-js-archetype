@@ -12,6 +12,7 @@ Prerequisites
 
 * Java >= 1.8
 * Maven >= 3.1
+* [Vert.x 3.0.0-M4 Bundle](https://bintray.com/artifact/download/vertx/downloads/vert.x-3.0.0-milestone4.zip) (Added to PATH)
 
 Using
 -----
