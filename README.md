@@ -14,6 +14,12 @@ Prerequisites
 * Maven >= 3.1
 * [Vert.x 3.0.0-M4 Bundle](https://bintray.com/artifact/download/vertx/downloads/vert.x-3.0.0-milestone4.zip) (Added to PATH)
 
+Installing Vert.x Bundle
+------------------------
+
+1. Extract zip file from link above to a location where you would like it to remain (VERTX_HOME)
+2. Add VERTX_HOME/bin to your execution PATH (Add 'export PATH=$PATH:$VERTX_HOME/bin' to your ~/.bashrc on Linux)
+
 Using
 -----
 
