@@ -37,7 +37,7 @@ The Maven POM has a configuration for running the application in "redeploy" mode
 so that changes are detected and redeployed without restarting the application.
 
 ```bash
-mvn exec:exec
+mvn exec:java
 ```
 
 Packaging And Deploying

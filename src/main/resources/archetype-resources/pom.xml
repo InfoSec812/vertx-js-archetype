@@ -66,16 +66,21 @@
                 </execution>
               </executions>
               <configuration>
-                <executable>vertx</executable>
+                <mainClass>io.vertx.core.Starter</mainClass>
                 <workingDirectory>${basedir}/src/main/resources</workingDirectory>
+                <systemProperties>
+                  <systemProperty>
+                    <key>vertx.deployment.options.redeploy</key>
+                    <value>true</value>
+                  </systemProperty>
+                  <systemProperty>
+                    <key>vertx.deployment.options.redeployScanPeriod</key>
+                    <value>10</value>
+                  </systemProperty>
+                </systemProperties>
                 <arguments>
                   <argument>run</argument>
-                  <argument>${basedir}/${packageInPathFormat}/main.js</argument>
-                  <argument>-Dvertx.deployment.options.redeploy=true</argument>
-                  <argument>-Dvertx.deployment.options.redeployScanPeriod=10</argument>
-<!--                  <argument>-cluster</argument>
-                  <argument>-cluster-host</argument>
-                  <argument>127.0.0.1</argument>-->
+                  <argument>${packageInPathFormat}/main.js</argument>
                 </arguments>
               </configuration>
             </plugin>
