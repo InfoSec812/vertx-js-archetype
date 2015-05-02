@@ -9,5 +9,11 @@
         <include>**/*.js</include>
       </includes>
     </fileSet>
+    <fileSet encoding="UTF-8" packaged="false">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>cluster.xml</include>
+      </includes>
+    </fileSet>
   </fileSets>
 </archetype-descriptor>

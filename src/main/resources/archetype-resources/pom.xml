@@ -22,6 +22,11 @@
             <artifactId>vertx-lang-js</artifactId>
             <version>3.0.0-milestone4</version>
         </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-hazelcast</artifactId>
+            <version>3.0.0-milestone4</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -67,7 +72,9 @@
               </executions>
               <configuration>
                 <mainClass>io.vertx.core.Starter</mainClass>
-                <workingDirectory>${basedir}/src/main/resources</workingDirectory>
+                <additionalClasspathElements>
+                  <additionalClasspathElement>${basedir}/src/main/resources</additionalClasspathElement>
+                </additionalClasspathElements>
                 <systemProperties>
                   <systemProperty>
                     <key>vertx.deployment.options.redeploy</key>
@@ -75,12 +82,15 @@
                   </systemProperty>
                   <systemProperty>
                     <key>vertx.deployment.options.redeployScanPeriod</key>
-                    <value>10</value>
+                    <value>100</value>
                   </systemProperty>
                 </systemProperties>
                 <arguments>
                   <argument>run</argument>
-                  <argument>${packageInPathFormat}/main.js</argument>
+                  <argument>com/codepalousa/vertx/main.js</argument>
+<!--                  <argument>-cluster</argument>
+                  <argument>-cluster-host</argument>
+                  <argument>127.0.0.1</argument>-->
                 </arguments>
               </configuration>
             </plugin>

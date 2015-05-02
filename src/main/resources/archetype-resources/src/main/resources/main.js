@@ -1,7 +1,6 @@
-var server = vertx.createHttpServer();
+/* global vertx */
+/* global console */
 
-server.requestHandler(function(req) {
-  req.response().putHeader("Content-Type", "text/html").end("<html><body><h1>Hello Vert.x</h1></body></html>");
-});
+// When Vert.x creates a new verticle, the "vertx" instance is already part of the scope, so we do not need to declare it.
 
-server.listen(8080);
+console.log("Main verticle deployed.");
