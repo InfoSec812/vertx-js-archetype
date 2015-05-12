@@ -6,26 +6,34 @@
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
 
+    <dependencyManagement>
+        <dependencies>
+	    <dependency>
+	        <groupId>io.vertx</groupId>
+		<artifactId>vertx-dependencies</artifactId>
+		<version>3.0.0-milestone5</version>
+		<type>pom</type>
+		<scope>import</scope>
+	    </dependency>
+	</dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
-            <version>3.0.0-milestone4</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-apex</artifactId>
-            <version>3.0.0-milestone4</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-lang-js</artifactId>
-            <version>3.0.0-milestone4</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-hazelcast</artifactId>
-            <version>3.0.0-milestone4</version>
         </dependency>
     </dependencies>
 
@@ -87,7 +95,7 @@
                 </systemProperties>
                 <arguments>
                   <argument>run</argument>
-                  <argument>com/codepalousa/vertx/main.js</argument>
+                  <argument>${packageInPathFormat}/main.js</argument>
 <!--                  <argument>-cluster</argument>
                   <argument>-cluster-host</argument>
                   <argument>127.0.0.1</argument>-->
